@@ -8,12 +8,12 @@ package pondoku;
  *
  * @author HP
  */
-public class choose extends javax.swing.JFrame {
+public class ponpesAlkahfi extends javax.swing.JFrame {
 
     /**
-     * Creates new form choose
+     * Creates new form ponpesDaqu
      */
-    public choose() {
+    public ponpesAlkahfi() {
         initComponents();
     }
 
@@ -27,66 +27,61 @@ public class choose extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnsalafy = new javax.swing.JLabel();
-        btnmodern = new javax.swing.JLabel();
+        btnfinish = new javax.swing.JLabel();
+        btnhome = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnsalafy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/pondok salafy.png"))); // NOI18N
-        btnsalafy.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnfinish.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/finish.png"))); // NOI18N
+        btnfinish.setText("jLabel2");
+        btnfinish.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnsalafyMouseClicked(evt);
+                btnfinishMouseClicked(evt);
             }
         });
-        jPanel1.add(btnsalafy, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, -1, -1));
+        jPanel1.add(btnfinish, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 460, 200, 90));
 
-        btnmodern.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/6.png"))); // NOI18N
-        btnmodern.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnhome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/button home.png"))); // NOI18N
+        btnhome.setText("jLabel2");
+        btnhome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnmodernMouseClicked(evt);
+                btnhomeMouseClicked(evt);
             }
         });
-        jPanel1.add(btnmodern, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
+        jPanel1.add(btnhome, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 460, 200, 90));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/choose.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kitab/ponpes alkahfi.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 900, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnmodernMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnmodernMouseClicked
+    private void btnhomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnhomeMouseClicked
         // TODO add your handling code here:
-        jurusan jr = new jurusan();
-        jr.setLocationRelativeTo(null);
-        jr.setVisible(true);
+        home h = new home();
+        h.setLocationRelativeTo(null);
+        h.setVisible(true);
         this.setVisible(false);
-        System.out.println("modern form berhasil");
-    }//GEN-LAST:event_btnmodernMouseClicked
+    }//GEN-LAST:event_btnhomeMouseClicked
 
-    private void btnsalafyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnsalafyMouseClicked
+    private void btnfinishMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnfinishMouseClicked
         // TODO add your handling code here:
-        KitabKuning KK = new KitabKuning();
-        KK.setLocationRelativeTo(null);
-        KK.setVisible(true);
         this.setVisible(false);
-        System.out.println("salafy form berhasil");
-    }//GEN-LAST:event_btnsalafyMouseClicked
+    }//GEN-LAST:event_btnfinishMouseClicked
 
     /**
      * @param args the command line arguments
@@ -105,31 +100,31 @@ public class choose extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(choose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ponpesAlkahfi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(choose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ponpesAlkahfi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(choose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ponpesAlkahfi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(choose.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ponpesAlkahfi.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                choose ch = new choose();
-                ch.setVisible(true);
-                ch.setLocationRelativeTo(null);
-                
+                new ponpesAlkahfi().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JLabel btnmodern;
-    public javax.swing.JLabel btnsalafy;
-    public javax.swing.JLabel jLabel1;
-    public javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel btnfinish;
+    private javax.swing.JLabel btnhome;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

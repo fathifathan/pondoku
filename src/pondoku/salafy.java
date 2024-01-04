@@ -27,33 +27,58 @@ public class salafy extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        sidogiri = new javax.swing.JLabel();
+        sabilunnaja = new javax.swing.JLabel();
+        imambukhori = new javax.swing.JLabel();
+        lirboyo = new javax.swing.JLabel();
+        tebuireng = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salaf5.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 160, -1, 450));
+        sidogiri.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salafy/salaf5.png"))); // NOI18N
+        sidogiri.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sidogiriMouseClicked(evt);
+            }
+        });
+        jPanel1.add(sidogiri, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 160, -1, 450));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salaf4.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, 450));
+        sabilunnaja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salafy/salaf4.png"))); // NOI18N
+        sabilunnaja.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sabilunnajaMouseClicked(evt);
+            }
+        });
+        jPanel1.add(sabilunnaja, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, 450));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salaf3.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, -1, 450));
+        imambukhori.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salafy/salaf3.png"))); // NOI18N
+        imambukhori.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imambukhoriMouseClicked(evt);
+            }
+        });
+        jPanel1.add(imambukhori, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, -1, 450));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salaf1.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, 450));
+        lirboyo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salafy/salaf1.png"))); // NOI18N
+        lirboyo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lirboyoMouseClicked(evt);
+            }
+        });
+        jPanel1.add(lirboyo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, 450));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salaf2.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, -1, 450));
+        tebuireng.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salafy/salaf2.png"))); // NOI18N
+        tebuireng.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tebuirengMouseClicked(evt);
+            }
+        });
+        jPanel1.add(tebuireng, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, -1, 450));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salafy.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salafy/salafy.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -64,11 +89,51 @@ public class salafy extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lirboyoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lirboyoMouseClicked
+        // TODO add your handling code here:
+        ponpesLirboyo a = new ponpesLirboyo();
+        a.setLocationRelativeTo(null);
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_lirboyoMouseClicked
+
+    private void tebuirengMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tebuirengMouseClicked
+        // TODO add your handling code here:
+        ponpesTebuireng b = new ponpesTebuireng();
+        b.setLocationRelativeTo(null);
+        b.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_tebuirengMouseClicked
+
+    private void imambukhoriMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imambukhoriMouseClicked
+        // TODO add your handling code here:
+        ponpesImambukhori c = new ponpesImambukhori();
+        c.setLocationRelativeTo(null);
+        c.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_imambukhoriMouseClicked
+
+    private void sabilunnajaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sabilunnajaMouseClicked
+        // TODO add your handling code here:
+        ponpesSabilunnaja d = new ponpesSabilunnaja();
+        d.setLocationRelativeTo(null);
+        d.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_sabilunnajaMouseClicked
+
+    private void sidogiriMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sidogiriMouseClicked
+        // TODO add your handling code here:
+        ponpesSidogiri e = new ponpesSidogiri();
+        e.setLocationRelativeTo(null);
+        e.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_sidogiriMouseClicked
 
     /**
      * @param args the command line arguments
@@ -101,18 +166,20 @@ public class salafy extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new salafy().setVisible(true);
+                salafy salafy = new salafy();
+                salafy.setLocationRelativeTo(null);
+                salafy.setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel imambukhori;
     public javax.swing.JLabel jLabel1;
-    public javax.swing.JLabel jLabel2;
-    public javax.swing.JLabel jLabel3;
-    public javax.swing.JLabel jLabel4;
-    public javax.swing.JLabel jLabel5;
-    public javax.swing.JLabel jLabel6;
     public javax.swing.JPanel jPanel1;
+    public javax.swing.JLabel lirboyo;
+    public javax.swing.JLabel sabilunnaja;
+    public javax.swing.JLabel sidogiri;
+    public javax.swing.JLabel tebuireng;
     // End of variables declaration//GEN-END:variables
 }

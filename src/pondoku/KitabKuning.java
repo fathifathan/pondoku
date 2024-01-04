@@ -27,15 +27,20 @@ public class KitabKuning extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        continueKitab = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/continue.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 400, 210, 90));
+        continueKitab.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/continue.png"))); // NOI18N
+        continueKitab.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                continueKitabMouseClicked(evt);
+            }
+        });
+        jPanel1.add(continueKitab, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 400, 210, 90));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kitab kuning.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -53,6 +58,14 @@ public class KitabKuning extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void continueKitabMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_continueKitabMouseClicked
+        // TODO add your handling code here:
+        salafy sl = new salafy();
+        sl.setLocationRelativeTo(null);
+        sl.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_continueKitabMouseClicked
 
     /**
      * @param args the command line arguments
@@ -90,7 +103,7 @@ public class KitabKuning extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel continueKitab;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

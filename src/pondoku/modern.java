@@ -27,31 +27,56 @@ public class modern extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        almuqodasah = new javax.swing.JLabel();
+        isykarima = new javax.swing.JLabel();
+        yanbuulquraan = new javax.swing.JLabel();
+        daqu = new javax.swing.JLabel();
+        darulhufadh = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sdcs.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 170, -1, 450));
+        almuqodasah.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sdcs.png"))); // NOI18N
+        almuqodasah.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                almuqodasahMouseClicked(evt);
+            }
+        });
+        jPanel1.add(almuqodasah, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 170, -1, 450));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sdad.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, -1, 450));
+        isykarima.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sdad.png"))); // NOI18N
+        isykarima.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                isykarimaMouseClicked(evt);
+            }
+        });
+        jPanel1.add(isykarima, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, -1, 450));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cxzcx.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, -1, 450));
+        yanbuulquraan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cxzcx.png"))); // NOI18N
+        yanbuulquraan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                yanbuulquraanMouseClicked(evt);
+            }
+        });
+        jPanel1.add(yanbuulquraan, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, -1, 450));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/vzcxvx.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, 450));
+        daqu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/vzcxvx.png"))); // NOI18N
+        daqu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                daquMouseClicked(evt);
+            }
+        });
+        jPanel1.add(daqu, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, 450));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/zxczx.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, 450));
+        darulhufadh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/zxczx.png"))); // NOI18N
+        darulhufadh.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                darulhufadhMouseClicked(evt);
+            }
+        });
+        jPanel1.add(darulhufadh, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, 450));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/modern.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -69,6 +94,49 @@ public class modern extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void daquMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_daquMouseClicked
+        // TODO add your handling code here:
+        ponpesDaqu dq = new ponpesDaqu();
+        dq.setLocationRelativeTo(null);
+        dq.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_daquMouseClicked
+
+    private void darulhufadhMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_darulhufadhMouseClicked
+        // TODO add your handling code here:
+        ponpesDarulhufadh dh = new ponpesDarulhufadh();
+        dh.setLocationRelativeTo(null);
+        dh.setVisible(true);
+        this.setVisible(false);
+        
+        
+    }//GEN-LAST:event_darulhufadhMouseClicked
+
+    private void yanbuulquraanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_yanbuulquraanMouseClicked
+        // TODO add your handling code here:
+        ponpesYanbuulquraan yq = new ponpesYanbuulquraan();
+        yq.setLocationRelativeTo(null);
+        yq.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_yanbuulquraanMouseClicked
+
+    private void isykarimaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_isykarimaMouseClicked
+        // TODO add your handling code here:
+        ponpesIsykarima ik = new ponpesIsykarima();
+        ik.setLocationRelativeTo(null);
+        ik.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_isykarimaMouseClicked
+
+    private void almuqodasahMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_almuqodasahMouseClicked
+        // TODO add your handling code here:
+        ponpesAlmuqodasah am = new ponpesAlmuqodasah();
+        am.setLocationRelativeTo(null);
+        am.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_almuqodasahMouseClicked
 
     /**
      * @param args the command line arguments
@@ -100,18 +168,20 @@ public class modern extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new modern().setVisible(true);
+                modern m = new modern();
+                m.setLocationRelativeTo(null);
+                m.setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel almuqodasah;
+    public javax.swing.JLabel daqu;
+    public javax.swing.JLabel darulhufadh;
+    public javax.swing.JLabel isykarima;
     public javax.swing.JLabel jLabel1;
-    public javax.swing.JLabel jLabel2;
-    public javax.swing.JLabel jLabel3;
-    public javax.swing.JLabel jLabel4;
-    public javax.swing.JLabel jLabel5;
-    public javax.swing.JLabel jLabel6;
     public javax.swing.JPanel jPanel1;
+    public javax.swing.JLabel yanbuulquraan;
     // End of variables declaration//GEN-END:variables
 }

@@ -27,21 +27,40 @@ public class jurusan extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        kitabChoose = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        bahasaChoose = new javax.swing.JLabel();
+        alquranChoose = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kitabChoose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kitab.png"))); // NOI18N
+        kitabChoose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                kitabChooseMouseClicked(evt);
+            }
+        });
+        jPanel1.add(kitabChoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 200, 300, 350));
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, 190, 290));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bahasa.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 300, 350));
+        bahasaChoose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bahasa.png"))); // NOI18N
+        bahasaChoose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bahasaChooseMouseClicked(evt);
+            }
+        });
+        jPanel1.add(bahasaChoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 300, 340));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kuran.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 260, 380));
+        alquranChoose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kuran.png"))); // NOI18N
+        alquranChoose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                alquranChooseMouseClicked(evt);
+            }
+        });
+        jPanel1.add(alquranChoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 430, 360));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/jurusan.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -54,11 +73,38 @@ public class jurusan extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 554, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void alquranChooseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_alquranChooseMouseClicked
+        // TODO add your handling code here:
+        modern md = new modern();
+        md.setLocationRelativeTo(null);
+        md.setVisible(true);
+        this.setVisible(false);
+        System.out.println("modern form berhasil");
+    }//GEN-LAST:event_alquranChooseMouseClicked
+
+    private void bahasaChooseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bahasaChooseMouseClicked
+        // TODO add your handling code here:
+        bahasa bh = new bahasa();
+        bh.setLocationRelativeTo(null);
+        bh.setVisible(true);
+        this.setVisible(false);
+        System.out.println("bahasa form berhasil");
+    }//GEN-LAST:event_bahasaChooseMouseClicked
+
+    private void kitabChooseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kitabChooseMouseClicked
+        // TODO add your handling code here:
+        kitab kt = new kitab();
+        kt.setLocationRelativeTo(null);
+        kt.setVisible(true);
+        this.setVisible(false);
+        System.out.println("kitab form berhasil");
+    }//GEN-LAST:event_kitabChooseMouseClicked
 
     /**
      * @param args the command line arguments
@@ -96,10 +142,11 @@ public class jurusan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel alquranChoose;
+    private javax.swing.JLabel bahasaChoose;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel kitabChoose;
     // End of variables declaration//GEN-END:variables
 }
